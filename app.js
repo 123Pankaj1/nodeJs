@@ -4,11 +4,11 @@ app.controller("appCtrl", function($scope,$http){
 	$scope.imageVar = 'file:///D:/nodeApp/image/';
 
 	$scope.sendEmail = function(){
-		console.log("email", $scope.to,$scope.subject,$scope.text)
+		console.log("email", $scope.to,$scope.subject,$scope.message)
 		var json = {
 			"to":$scope.to,
 			"subject":$scope.subject,
-			"text":$scope.text
+			"message":$scope.message
 		}
 		$http.post("http://127.0.0.1:5000/api/sendemailapi",json)
             .then(
