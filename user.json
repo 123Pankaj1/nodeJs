@@ -1,0 +1,17 @@
+{
+  {
+      "name" : "Than Singh",
+	  "age" : "23",
+	  "mobile_no" : "9785454526"
+   },
+    {
+      "name" : "Akshya",
+	  "age" : "24",
+	  "mobile_no" : "9694454526"
+   },
+   {
+      "name" : "Khuma",
+	  "age" : "25",
+	  "mobile_no" : "9928454526"
+   }
+}

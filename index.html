@@ -1,0 +1,79 @@
+<html ng-app="myApp">
+	<head>
+	<meta charset="utf-8"/>
+	<script src="angular.min.js"></script>	
+	 <link rel="stylesheet" href="bootstrap.css">	
+	<script src="app.js"></script>	
+	
+	<style>
+<!-- table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+} -->
+</style>
+
+</head>
+   <body ng-controller="appCtrl">
+      
+      <form><br>
+         To: <input type = "text" name = "to" ng-model="to">  <br><br>
+         Subject: <input type = "text" name = "subject" ng-model="subject">  <br><br>
+         Message: <input type = "text" name = "text" ng-model="text">  <br><br>
+        <input type = "submit" value = "Send Email" ng-click="sendEmail()">
+      </form>
+
+
+      <form>
+         First Name: <input type = "text" name = "name" ng-model="modal.name">  <br><br>
+         Age : <input type = "text" name = "age" ng-model="modal.age"><br><br>
+		  Mobile No : <input type = "text" name = "mobile_no" ng-model="modal.mobile_no"><br><br>
+		<!-- <div>
+      <label for="fileId">Profile picture:</label>
+      <input type = "file" id="fileId" name="image"  file-model = "myFile" accept="image/*" />
+      
+    </div> -->
+         <input type = "submit" value = "Submit" ng-click="submit()">
+		  <input type = "button" value = "Get Data" ng-click="getData()">
+      </form>
+	  
+	  
+<div class="container">
+  <h2>User Info</h2>
+          
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+		<th>S.NO</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Mobile No.</th>
+		 <!-- <th>Image</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in getDataArr">
+		<td>{{$index+1}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.age}}</td>
+        <td>{{x.mobile_no}}</td>
+		<!-- <td><img src="{{imageVar}}{{x.image}}" height="42" width="42" style="border-radius: 50%;"></td> -->
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+      
+   </body>
+</html>
